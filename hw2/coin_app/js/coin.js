@@ -12,9 +12,7 @@
 	min = 0;
 	
 	//рандомный выбор 0 или 1
-	getRandomNumb = function(numb){
-		//задаем интервал рандома
-		
+	getRandomNumb = function(numb){		
 			return Math.floor(Math.random(numb) * 1) + 1;
 	}
 
@@ -25,13 +23,6 @@
 		});
 	}
 
-	//читаем файл
-	// readFile = function(path_to_file) {
-	// 	fs.readFile( path_to_file, function (err, data) {
-	// 	 	if (err) throw err;
-	// 		console.log(data.toString());
-	// 	});
-	// }
 
 	console.log('Start game - Please type 0 or 1');		
 
@@ -42,20 +33,14 @@
 		if(numb == min || numb == max){
 			if(numb == rand){
 				var GameResult = 'win\n';
-
-		
 				console.log('You win! '+ numb +' is a right answer');
-				rl.close();
 			}
 			else{
 				var GameResult = 'lose\n';
-
-				// //пишем в файл результат
-				// writeToFile(GameResult,path_to_file);
 				console.log('You lose! ' + numb + ' it\'s a wrond answer');
-				rl.close();
+				
 			}
-
+			rl.close();
 				//пишем в файл результат 
 			writeToFile(GameResult,path_to_file);
 		}
