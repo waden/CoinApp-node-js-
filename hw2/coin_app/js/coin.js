@@ -11,7 +11,7 @@
 		max = 1,
 		min = 0;
 	
-	//рандомный выбор 1 или 2
+	//рандомный выбор 0 или 1
 	getRandomNumb = function(numb){
 		//задаем интервал рандома
 		
@@ -52,15 +52,16 @@
 		if(numb == min || numb == max){
 			if(numb == rand){
 				var GameResult = 'win';
+				//запрашиваем путь у юзера НЕ РАБОТАЕТ 
 				var path_to_file = getPath();
 
-				//пишем в файл результат
+				//пишем в файл результат НЕ РАБОТАЕТ 
 				writeToFile(GameResult,path_to_file);
 				console.log('You win! '+ numb +' is a right answer');
 				rl.close();
 			}
 			else{
-				var GameResult = 'win';
+				var GameResult = 'lose';
 				//запрашиваем путь у юзера НЕ РАБОТАЕТ 
 				var path_to_file = getPath();
 
